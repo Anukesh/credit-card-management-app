@@ -105,7 +105,7 @@
   .cards-container {
     display: block;
     padding: 0;
-    /* margin-top: 160px; */
+    margin-top: 160px;
     border: none;
     box-shadow: none;
   }
@@ -121,7 +121,8 @@
     z-index: 1000;
     background: #ffffff;
     padding-bottom: 24px;
-    min-height: 200px;
+    /* min-height: 200px; */
+    min-height: calc(100vh - 550px);
     margin: auto;
     height: 100%;
   }

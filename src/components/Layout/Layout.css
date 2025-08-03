@@ -33,6 +33,12 @@ body {
   overflow: hidden;
 }
 
+@media screen and (max-width: 375px) {
+  .cards-container {
+    padding-bottom: 150px; /* more space to accommodate fixed footer */
+  }
+}
+
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
@@ -40,7 +46,7 @@ body {
 
   .main-content {
     margin-left: 0;
-    padding-bottom: 56px;
+    padding-bottom: calc(56px + env(safe-area-inset-bottom));
   }
 
   .content-area {
