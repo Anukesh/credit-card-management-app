@@ -33,7 +33,7 @@ body {
   overflow: hidden;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 395px) {
   .cards-container {
     padding-bottom: 150px; /* more space to accommodate fixed footer */
   }
