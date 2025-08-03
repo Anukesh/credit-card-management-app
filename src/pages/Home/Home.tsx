@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <div className="page-container">
-      <h1>Home</h1>
+      <h1>Home home</h1>
       <p>Welcome to the Aspire Banking Platform</p>
       <div className="page-content">
         <p>
