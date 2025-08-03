@@ -5,11 +5,16 @@ import arrowIcon from "../../assets/down-arrow.svg";
 interface DropdownProps {
   title: string;
   icon?: string;
-  onToggle: (isExpanded: boolean) => void;
+  onToggle?: (isExpanded: boolean) => void;
   children: React.ReactNode;
 }
 
-export function Dropdown({ title, icon, children, onToggle }: DropdownProps) {
+export function Dropdown({
+  title,
+  icon,
+  children,
+  onToggle = () => {},
+}: DropdownProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpanded = () => {
