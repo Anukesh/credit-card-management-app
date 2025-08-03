@@ -7,6 +7,7 @@ import announcementIcon from "../../assets/megaphone.svg";
 import cardIcon from "../../assets/card-white.svg";
 import nextIcon from "../../assets/next.svg";
 import type { Transaction } from "../../types/card";
+import { useState } from "react";
 
 interface RecentTransactionsProps {
   transactions: Transaction[];
@@ -21,9 +22,14 @@ const iconMap: Record<string, string> = {
 export function RecentTransactions(
   { transactions }: RecentTransactionsProps = { transactions: [] }
 ) {
+  const [expanded, setExpanded] = useState(false);
   return (
     <>
-      <Dropdown title="Recent transactions" icon={PaymentsIcon}>
+      <Dropdown
+        title="Recent transactions"
+        icon={PaymentsIcon}
+        onToggle={(e) => setExpanded(e)}
+      >
         <div className="transactions-list">
           {transactions.length > 0 ? (
             transactions.map((transaction) => (
@@ -69,13 +75,12 @@ export function RecentTransactions(
             </div>
           )}
         </div>
-
-        {transactions.length > 0 && (
-          <div className="view-all-transactions">
-            <button className="view-all-btn">View all card transactions</button>
-          </div>
-        )}
       </Dropdown>
+      {transactions.length > 0 && expanded && (
+        <div className="view-all-transactions">
+          <button className="view-all-btn">View all card transactions</button>
+        </div>
+      )}
     </>
   );
 }

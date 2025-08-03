@@ -46,7 +46,7 @@ body {
   .content-area {
     padding: 0px;
     background: #0c365a;
-    color: white;
+    /* color: white; */
     scrollbar-width: none;
   }
 }
