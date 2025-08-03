@@ -1,0 +1,145 @@
+.side-navigation {
+  position: fixed;
+  /* left: 0; */
+  top: 0;
+  width: 340px;
+  height: 100vh;
+  background: #0c365a;
+  color: white;
+  padding: 0;
+  z-index: 1000;
+  padding: 48px;
+}
+
+.nav-header {
+  /* padding: 48px; */
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.nav-logo {
+  width: 125px;
+  height: auto;
+}
+
+.nav-tagline {
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
+  opacity: 30%;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.nav-item {
+  margin-bottom: 8px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-link:hover:not(.disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.nav-link.active {
+  filter: none;
+  color: #22c55e;
+}
+
+.nav-link.active .nav-icon {
+  filter: brightness(0) saturate(100%) invert(64%) sepia(98%) saturate(451%)
+    hue-rotate(81deg) brightness(119%) contrast(93%);
+}
+
+.nav-link.disabled {
+  color: rgba(255, 255, 255, 0.4);
+  cursor: not-allowed;
+}
+
+.nav-link.disabled:hover {
+  background-color: transparent;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.nav-icon.disabled {
+  opacity: 0.4;
+}
+
+.nav-label {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .nav-header {
+    display: none;
+  }
+  .nav-label {
+    font-size: 9px;
+    color: #dddddd;
+    /* display: none; */
+  }
+
+  .side-navigation {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    height: 56px;
+    background: #0c365a;
+    color: white;
+    padding: 0;
+    z-index: 10000;
+    filter: drop-shadow(0px -3px 6px #00000014);
+  }
+
+  .nav-list {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 56px;
+    margin: 0;
+    align-items: center;
+    padding: 9px 31px;
+    background: #ffffff;
+  }
+
+  .nav-link {
+    filter: brightness(0) invert(96%) sepia(0%) saturate(116%)
+      hue-rotate(194deg) brightness(96%) contrast(86%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .nav-link.active .nav-label {
+    color: #22c55e;
+  }
+}

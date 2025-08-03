@@ -1,0 +1,176 @@
+.available-balance-label {
+  font-size: 14px;
+  line-height: 16px;
+  color: #222222;
+  margin: 0;
+}
+
+.available-balance {
+  line-height: 40px;
+  color: #222222;
+  margin: 8px 0 0 0;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+}
+
+.available-balance h3 {
+  margin: 0;
+  display: inline;
+  font-size: 26px;
+}
+
+.available-balance-logo {
+  margin-right: 12px;
+  background: #01d167;
+  color: #ffffff;
+  border-radius: 4px;
+  line-height: 16px;
+  font-size: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 40px;
+}
+
+.cards-header {
+  display: flex;
+  gap: 19px;
+  margin-top: 39px;
+}
+
+.cards-header button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 0 4px 0;
+  opacity: 30%;
+}
+
+.cards-header button.active {
+  border-bottom: 2px solid #23cefd;
+  font-weight: bold;
+  opacity: 100%;
+}
+
+.cards-container {
+  margin-top: 20px;
+  min-height: 600px;
+  border: 1px solid #fcfcfc;
+  border-radius: 8px;
+  box-shadow: 0px 2px 12px #00000014;
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.cards-container .credit-cards-section {
+  flex: 1;
+  padding: 31.5px 0px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cards-container .buttons-section {
+  flex: 2;
+  padding: 60.5px 40px 40px 0px;
+}
+
+.cards-component-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-new-card {
+  background-color: #325baf;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 35px;
+  width: 109px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    display: block;
+    padding: 0;
+    margin-top: 160px;
+    border: none;
+    box-shadow: none;
+  }
+
+  .cards-container .credit-cards-section,
+  .cards-container .buttons-section {
+    width: 100%;
+    padding: 0;
+  }
+
+  .cards-container .buttons-section {
+    position: relative;
+    z-index: 1000;
+    background: #ffffff;
+  }
+  .main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    padding: 24px;
+    background: #0c365a;
+  }
+
+  .cards-header {
+    position: fixed;
+    top: 118px;
+    width: 100%;
+    /* margin-top: 0px; */
+    margin: 0px 24px;
+  }
+
+  .cards-header button {
+    color: #ffffff;
+  }
+
+  .available-balance-label {
+    color: #ffffff;
+  }
+
+  .available-balance h3 {
+    font-size: 24px;
+    color: #ffffff;
+  }
+
+  .available-balance-logo {
+    width: 40px;
+    height: 22px;
+  }
+  .add-new-card {
+    border: none;
+    background: none;
+    color: #23cefd;
+    width: 83px;
+    height: 18px;
+    padding: 0;
+  }
+
+  .add-new-card img {
+    filter: brightness(0) invert(71%) sepia(56%) saturate(3200%)
+      hue-rotate(159deg) brightness(104%) contrast(98%);
+  }
+
+  /* .available-balance-label {
+    position: fixed;
+    top: 10px;
+  } */
+}

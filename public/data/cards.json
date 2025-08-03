@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "holderName": "Anukesh Henry",
+    "cardNumber": "5647 3411 2678 2020",
+    "expiryDate": "12/20",
+    "cvv": "***",
+    "type": "VISA",
+    "transactions": [
+      {
+        "id": 1,
+        "merchant": "Hamleys",
+        "date": "20 May 2020",
+        "amount": 150,
+        "type": "credit",
+        "category": "Refund on debit card",
+        "icon": "file-storage",
+        "iconBg": "#dbeafe"
+      },
+      {
+        "id": 2,
+        "merchant": "Amazon",
+        "date": "18 May 2020",
+        "amount": 89,
+        "type": "debit",
+        "category": "Charged to debit card",
+        "icon": "flights",
+        "iconBg": "#d1fae5"
+      },
+      {
+        "id": 3,
+        "merchant": "Spotify",
+        "date": "15 May 2020",
+        "amount": 12,
+        "type": "debit",
+        "category": "Charged to debit card",
+        "icon": "megaphone",
+        "iconBg": "#fce7f3"
+      },
+      {
+        "id": 4,
+        "merchant": "Netflix",
+        "date": "12 May 2020",
+        "amount": 15,
+        "type": "debit",
+        "category": "Charged to debit card",
+        "icon": "file-storage",
+        "iconBg": "#dbeafe"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "holderName": "Mark Henry",
+    "cardNumber": "4532 1234 5678 9012",
+    "expiryDate": "08/25",
+    "cvv": "***",
+    "type": "VISA",
+    "transactions": [
+      {
+        "id": 5,
+        "merchant": "Starbucks",
+        "date": "22 May 2020",
+        "amount": 25,
+        "type": "debit",
+        "category": "Charged to debit card",
+        "icon": "flights",
+        "iconBg": "#d1fae5"
+      },
+      {
+        "id": 6,
+        "merchant": "Uber",
+        "date": "21 May 2020",
+        "amount": 18,
+        "type": "debit",
+        "category": "Charged to debit card",
+        "icon": "megaphone",
+        "iconBg": "#fce7f3"
+      },
+      {
+        "id": 7,
+        "merchant": "Apple Store",
+        "date": "19 May 2020",
+        "amount": 299,
+        "type": "debit",
+        "category": "Charged to debit card",
+        "icon": "file-storage",
+        "iconBg": "#dbeafe"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "holderName": "Mark Henry",
+    "cardNumber": "6011 1111 1111 1117",
+    "expiryDate": "03/26",
+    "cvv": "***",
+    "type": "VISA",
+    "transactions": [
+      {
+        "id": 8,
+        "merchant": "Target",
+        "date": "24 May 2020",
+        "amount": 67,
+        "type": "debit",
+        "category": "Charged to debit card",
+        "icon": "flights",
+        "iconBg": "#d1fae5"
+      },
+      {
+        "id": 9,
+        "merchant": "Gas Station",
+        "date": "23 May 2020",
+        "amount": 45,
+        "type": "debit",
+        "category": "Charged to debit card",
+        "icon": "megaphone",
+        "iconBg": "#fce7f3"
+      },
+      {
+        "id": 10,
+        "merchant": "Grocery Store",
+        "date": "22 May 2020",
+        "amount": 85,
+        "type": "debit",
+        "category": "Charged to debit card",
+        "icon": "file-storage",
+        "iconBg": "#dbeafe"
+      },
+      {
+        "id": 11,
+        "merchant": "Restaurant",
+        "date": "20 May 2020",
+        "amount": 42,
+        "type": "debit",
+        "category": "Charged to debit card",
+        "icon": "flights",
+        "iconBg": "#d1fae5"
+      }
+    ]
+  }
+]

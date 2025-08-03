@@ -1,0 +1,74 @@
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  max-width: 414px;
+  height: 116px;
+  background: #edf3ff;
+  border-radius: 16px;
+  padding: 21px 27px;
+}
+
+.action-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.action-button:active {
+  transform: translateY(0);
+}
+
+.button-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.button-icon img {
+  width: 32px;
+  height: auto;
+}
+
+.button-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  text-align: center;
+  line-height: 1.3;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .buttons-container {
+    padding: 16px;
+    border-radius: 16px 16px 0px 0px;
+    margin-top: 300px;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .action-button {
+    gap: 6px;
+    padding: 4px;
+  }
+
+  .button-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .button-label {
+    font-size: 11px;
+  }
+}

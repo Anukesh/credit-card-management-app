@@ -1,0 +1,52 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  max-width: 1366px;
+  margin: auto;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 340px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 60px;
+  background-color: #f8f9fa;
+}
+
+/* Ensure no body scrolling */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding-bottom: 56px;
+  }
+
+  .content-area {
+    padding: 0px;
+    background: #0c365a;
+    color: white;
+    scrollbar-width: none;
+  }
+}
