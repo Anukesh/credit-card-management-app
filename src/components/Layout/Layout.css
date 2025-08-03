@@ -46,7 +46,7 @@ body {
 
   .main-content {
     margin-left: 0;
-    padding-bottom: calc(56px + env(safe-area-inset-bottom));
+    padding-bottom: 56px;
   }
 
   .content-area {
