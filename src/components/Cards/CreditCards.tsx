@@ -17,6 +17,7 @@ export function CreditCards(
 ) {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [showCardNumber, setShowCardNumber] = useState(false);
+  const [touchStartX, setTouchStartX] = useState(0);
 
   const formatCardNumber = (cardNumber: string, show: boolean) => {
     // Remove any existing spaces and ensure we have exactly 16 digits
@@ -41,6 +42,43 @@ export function CreditCards(
     setShowCardNumber(!showCardNumber);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    // Prevent default scrolling behavior during horizontal swipes
+    const touchCurrentX = e.touches[0].clientX;
+    const diffX = Math.abs(touchCurrentX - touchStartX);
+
+    // If horizontal movement is significant, prevent scrolling
+    if (diffX > 10) {
+      e.preventDefault();
+    }
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const swipeDistance = touchStartX - touchEndX;
+    const minSwipeDistance = 50;
+
+    // Left swipe (next card)
+    if (
+      swipeDistance > minSwipeDistance &&
+      currentCardIndex < cards.length - 1
+    ) {
+      const newIndex = currentCardIndex + 1;
+      setCurrentCardIndex(newIndex);
+      handleCardChange?.(newIndex);
+    }
+    // Right swipe (previous card)
+    else if (swipeDistance < -minSwipeDistance && currentCardIndex > 0) {
+      const newIndex = currentCardIndex - 1;
+      setCurrentCardIndex(newIndex);
+      handleCardChange?.(newIndex);
+    }
+  };
+
   return (
     <div className="credit-cards-container">
       <div className="card-body">
@@ -55,7 +93,12 @@ export function CreditCards(
           </button>
         </div>
 
-        <div className="card-carousel">
+        <div
+          className="card-carousel"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           <div
             className="cards-wrapper"
             style={{
