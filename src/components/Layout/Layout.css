@@ -32,11 +32,6 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-@media screen and (max-width: 430px) {
-  .cards-container {
-    padding-bottom: 150px; /* more space to accommodate fixed footer */
-  }
-}
 
 @media (max-width: 768px) {
   .layout {
@@ -53,5 +48,11 @@ body {
     background: #0c365a;
     /* color: white; */
     scrollbar-width: none;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .cards-container {
+    padding-bottom: 150px; /* more space to accommodate fixed footer */
   }
 }
