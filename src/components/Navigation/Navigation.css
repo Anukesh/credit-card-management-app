@@ -108,7 +108,7 @@
   }
 
   .side-navigation {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     top: auto;
     width: 100%;

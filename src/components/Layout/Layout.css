@@ -35,12 +35,12 @@ body {
 
 @media (max-width: 768px) {
   .layout {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .main-content {
     margin-left: 0;
-    padding-bottom: 56px;
+    /* padding-bottom: 56px; */
   }
 
   .content-area {
@@ -53,6 +53,12 @@ body {
 
 @media (max-width: 375px) {
   .main-content {
-    padding-bottom: 150px;
+    /* padding-bottom: 150px; */
   }
 }
+
+/* @media (max-width: 360px) {
+  .main-content {
+    padding-bottom: 56px;
+  }
+} */
