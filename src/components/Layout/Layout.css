@@ -51,8 +51,8 @@ body {
   }
 }
 
-@media (max-width: 430px) {
-  .cards-container {
-    padding-bottom: 150px; /* more space to accommodate fixed footer */
+@media (max-width: 375px) {
+  .main-content {
+    padding-bottom: 150px;
   }
 }
