@@ -109,14 +109,13 @@
 
   .side-navigation {
     position: sticky;
-    bottom: 0;
     top: auto;
     width: 100%;
     height: 56px;
     background: #0c365a;
     color: white;
     padding: 0;
-    z-index: 10000;
+    z-index: 1001;
     filter: drop-shadow(0px -3px 6px #00000014);
   }
 
